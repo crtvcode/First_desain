@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ged Z</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline": "#747878",
+                        "inverse-primary": "#c8c6c5",
+                        "border-light": "#E5E5E5",
+                        "outline-variant": "#c4c7c7",
+                        "medium-emphasis": "#737373",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "surface-container": "#eeeeee",
+                        "on-surface": "#1a1c1c",
+                        "background": "#f9f9f9",
+                        "surface": "#FFFFFF",
+                        "primary-container": "#1c1b1b",
+                        "primary": "#000000",
+                        "image-bg": "#F5F5F5",
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "sm": "8px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "huge": "64px",
+                        "gutter": "24px",
+                    },
+                    fontFamily: {
+                        "body-md": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "price-tag": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+    <nav class="bg-surface dark:bg-pure-black border-b border-border-light dark:border-outline docked full-width top-0 sticky z-50 transition-all duration-300 relative">
+        <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop w-full max-w-full mx-auto">
+            <div class="font-headline-lg text-headline-lg font-black tracking-tighter text-primary dark:text-on-primary cursor-pointer">ged z</div>
+            
+            <div class="hidden md:flex items-center space-x-xl font-body-md text-body-md">
+                <a class="text-primary dark:text-on-primary font-bold border-b-2 border-primary dark:border-on-primary pb-1 transition-colors duration-200" href="index.html">Beranda</a>
+                <a class="text-medium-emphasis dark:text-outline-variant hover:text-primary transition-colors duration-200" href="belanja.html">Belanja</a>
+                <a class="text-medium-emphasis dark:text-outline-variant hover:text-primary transition-colors duration-200" href="koleksi.html">Koleksi</a>
+            </div>
+            
+            <div class="flex items-center space-x-4 md:space-x-lg">
+                <button class="cursor-pointer active:opacity-70 text-primary demo-btn" data-action="Pencarian">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+                <button class="cursor-pointer active:opacity-70 text-primary demo-btn" data-action="Keranjang Belanja">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </button>
+                <button class="hidden sm:block cursor-pointer active:opacity-70 text-primary demo-btn" data-action="Profil User">
+                    <span class="material-symbols-outlined">person</span>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden cursor-pointer active:opacity-70 text-primary">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-surface border-b border-border-light flex-col px-margin-mobile py-4 space-y-4 shadow-lg md:hidden">
+            <a class="text-primary font-bold block" href="index.html">Beranda</a>
+            <a class="text-medium-emphasis hover:text-primary block" href="belanja.html">Belanja</a>
+            <a class="text-medium-emphasis hover:text-primary block" href="koleksi.html">Koleksi</a>
+            <a class="text-medium-emphasis hover:text-primary block" href="#">Profil User</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="relative w-full h-[90vh] overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Minimalist Workspace" class="w-full h-full object-cover grayscale brightness-90" src="https://picsum.photos/id/119/1920/1080">
+            </div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center z-10 px-margin-mobile md:px-margin-desktop text-center">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-tight text-on-primary uppercase select-none pointer-events-none drop-shadow-sm font-headline-lg">
+                    TINGKATKAN <span class="block">RUANGMU</span>
+                </h1>
+            </div>
+            <div class="absolute bottom-10 md:bottom-huge left-1/2 -translate-x-1/2 w-full max-w-xl px-margin-mobile z-20">
+                <div class="bg-surface border border-border-light rounded-full p-2 flex items-center h-16 group focus-within:border-primary transition-all duration-200 shadow-lg">
+                    <span class="material-symbols-outlined ml-2 md:ml-4 text-medium-emphasis">search</span>
+                    <input class="flex-grow bg-transparent border-none focus:ring-0 px-2 md:px-4 font-body-md md:font-body-lg text-primary outline-none w-1/2" placeholder="Cari perlengkapan..." type="text">
+                    <button class="bg-primary text-on-primary px-4 md:px-8 h-12 rounded-full font-label-md text-label-md hover:bg-neutral-800 transition-colors demo-btn" data-action="Cari Barang">
+                        CARI
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 md:py-huge px-margin-mobile md:px-margin-desktop">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-xl">Jelajahi Kategori</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div class="group relative aspect-[16/9] overflow-hidden rounded-[1rem] cursor-pointer shadow-md">
+                    <img class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" src="https://picsum.photos/id/0/800/600" alt="Corporate Setup">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <span class="text-on-primary font-headline-md text-headline-md tracking-wider uppercase text-center">Setup Korporat</span>
+                    </div>
+                </div>
+                <div class="group relative aspect-[16/9] overflow-hidden rounded-[1rem] cursor-pointer shadow-md">
+                    <img class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" src="https://picsum.photos/id/36/800/600" alt="Streamer Gear">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <span class="text-on-primary font-headline-md text-headline-md tracking-wider uppercase text-center">Perlengkapan Streamer</span>
+                    </div>
+                </div>
+                <div class="group relative aspect-[16/9] overflow-hidden rounded-[1rem] cursor-pointer shadow-md">
+                    <img class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" src="https://picsum.photos/id/175/800/600" alt="Minimalist Gamer">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <span class="text-on-primary font-headline-md text-headline-md tracking-wider uppercase text-center">Gamer Minimalis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 md:py-huge px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+            <div class="flex justify-between items-end mb-xl">
+                <h2 class="font-headline-lg text-headline-lg text-primary">Sedang Tren</h2>
+                <a class="font-label-md text-label-md text-primary underline underline-offset-4 uppercase tracking-wider" href="#">Lihat Semua</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                <div class="bg-surface rounded-[1rem] p-4 flex flex-col group shadow-sm hover:shadow-md transition-all duration-300">
+                    <div class="relative bg-image-bg rounded-[1rem] aspect-square overflow-hidden mb-md flex items-center justify-center">
+                        <img class="w-full h-full object-cover grayscale group-hover:scale-110 transition-transform duration-500" src="https://picsum.photos/id/366/500/500" alt="Keyboard">
+                        <div class="absolute top-3 right-3 bg-surface text-primary px-3 py-1 rounded-full font-label-md text-label-md shadow">BARU</div>
+                    </div>
+                    <div class="px-2 mb-4">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-1">Apex Pro TKL</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="font-price-tag text-price-tag text-primary">$179</span>
+                            <div class="flex items-center text-primary">
+                                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="font-label-md text-label-md ml-1">4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-2 mt-auto">
+                        <button class="w-full bg-primary text-on-primary h-12 rounded-full font-label-md text-label-md hover:bg-neutral-800 transition-colors uppercase demo-btn" data-action="Beli Apex Pro">Beli Sekarang</button>
+                        <button class="w-full border border-border-light text-primary h-12 rounded-full font-label-md text-label-md hover:border-primary transition-colors uppercase demo-btn" data-action="Tambah Apex Pro ke Keranjang">Tambah</button>
+                    </div>
+                </div>
+                
+                <div class="bg-surface rounded-[1rem] p-4 flex flex-col group shadow-sm hover:shadow-md transition-all duration-300">
+                    <div class="relative bg-image-bg rounded-[1rem] aspect-square overflow-hidden mb-md flex items-center justify-center">
+                        <img class="w-full h-full object-cover grayscale group-hover:scale-110 transition-transform duration-500" src="https://picsum.photos/id/0/500/500" alt="Monitor">
+                    </div>
+                    <div class="px-2 mb-4">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-1">UltraSharp 32"</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="font-price-tag text-price-tag text-primary">$899</span>
+                            <div class="flex items-center text-primary">
+                                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="font-label-md text-label-md ml-1">5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-2 mt-auto">
+                        <button class="w-full bg-primary text-on-primary h-12 rounded-full font-label-md text-label-md hover:bg-neutral-800 transition-colors uppercase demo-btn" data-action="Beli UltraSharp">Beli Sekarang</button>
+                        <button class="w-full border border-border-light text-primary h-12 rounded-full font-label-md text-label-md hover:border-primary transition-colors uppercase demo-btn" data-action="Tambah UltraSharp ke Keranjang">Tambah</button>
+                    </div>
+                </div>
+
+                <div class="bg-surface rounded-[1rem] p-4 flex flex-col group shadow-sm hover:shadow-md transition-all duration-300">
+                    <div class="relative bg-image-bg rounded-[1rem] aspect-square overflow-hidden mb-md flex items-center justify-center">
+                        <img class="w-full h-full object-cover grayscale group-hover:scale-110 transition-transform duration-500" src="https://picsum.photos/id/96/500/500" alt="Mouse">
+                    </div>
+                    <div class="px-2 mb-4">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-1">Orbital G6</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="font-price-tag text-price-tag text-primary">$129</span>
+                            <div class="flex items-center text-primary">
+                                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="font-label-md text-label-md ml-1">4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-2 mt-auto">
+                        <button class="w-full bg-primary text-on-primary h-12 rounded-full font-label-md text-label-md hover:bg-neutral-800 transition-colors uppercase demo-btn" data-action="Beli Orbital G6">Beli Sekarang</button>
+                        <button class="w-full border border-border-light text-primary h-12 rounded-full font-label-md text-label-md hover:border-primary transition-colors uppercase demo-btn" data-action="Tambah Orbital G6 ke Keranjang">Tambah</button>
+                    </div>
+                </div>
+
+                <div class="bg-surface rounded-[1rem] p-4 flex flex-col group shadow-sm hover:shadow-md transition-all duration-300">
+                    <div class="relative bg-image-bg rounded-[1rem] aspect-square overflow-hidden mb-md flex items-center justify-center">
+                        <img class="w-full h-full object-cover grayscale group-hover:scale-110 transition-transform duration-500" src="https://picsum.photos/id/348/500/500" alt="Headphones">
+                        <div class="absolute top-3 right-3 bg-primary text-on-primary px-3 py-1 rounded-full font-label-md text-label-md shadow">DISKON</div>
+                    </div>
+                    <div class="px-2 mb-4">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-1">Acoustic S1</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="font-price-tag text-price-tag text-primary">$299</span>
+                            <div class="flex items-center text-primary">
+                                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="font-label-md text-label-md ml-1">4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-2 mt-auto">
+                        <button class="w-full bg-primary text-on-primary h-12 rounded-full font-label-md text-label-md hover:bg-neutral-800 transition-colors uppercase demo-btn" data-action="Beli Acoustic S1">Beli Sekarang</button>
+                        <button class="w-full border border-border-light text-primary h-12 rounded-full font-label-md text-label-md hover:border-primary transition-colors uppercase demo-btn" data-action="Tambah Acoustic S1 ke Keranjang">Tambah</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 md:py-huge px-margin-mobile md:px-margin-desktop">
+            <div class="bg-primary rounded-[1.5rem] py-10 md:py-huge px-margin-mobile md:px-margin-desktop flex flex-col items-center text-center">
+                <h2 class="text-3xl md:text-5xl font-bold leading-normal text-on-primary mb-md font-headline-lg">Gabung Komunitas ged z</h2>
+                <p class="font-body-lg text-body-lg text-on-primary/70 mb-xl max-w-xl">Dapatkan info rilisan terbaru, ulasan perlengkapan dari ahli, dan inspirasi tata ruang eksklusif setiap minggu di emailmu.</p>
+                
+                <form class="w-full max-w-lg bg-white/10 border border-white/20 rounded-2xl md:rounded-full p-2 flex flex-col md:flex-row gap-2 md:gap-0 items-center focus-within:bg-white/20 transition-all" onsubmit="event.preventDefault(); alert('Berhasil berlangganan Newsletter!');">
+                    <input class="flex-grow bg-transparent border-none focus:ring-0 px-4 md:px-6 text-on-primary placeholder-on-primary/50 font-body-md outline-none w-full md:w-auto text-center md:text-left py-3 md:py-0" placeholder="Masukkan emailmu" type="email" required>
+                    <button class="bg-on-primary text-primary px-8 h-12 rounded-xl md:rounded-full font-label-md text-label-md hover:opacity-90 transition-opacity uppercase font-bold w-full md:w-auto" type="submit">
+                        Langganan
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-surface dark:bg-pure-black border-t border-border-light dark:border-outline">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-10 md:py-huge px-margin-mobile md:px-margin-desktop w-full max-w-full mx-auto">
+            <div class="md:col-span-1 mb-6 md:mb-0">
+                <div class="font-headline-md text-headline-md font-bold text-primary dark:text-on-primary mb-md">ged z</div>
+                <p class="text-medium-emphasis dark:text-outline-variant max-w-xs">Mendefinisikan ulang ruang kerja modern melalui gaya minimalis dan estetika berkinerja tinggi.</p>
+            </div>
+            <div class="mb-6 md:mb-0">
+                <h4 class="font-label-md text-label-md text-primary dark:text-on-primary uppercase mb-base">Belanja</h4>
+                <ul class="space-y-sm mt-4">
+                    <li><a class="text-medium-emphasis dark:text-outline-variant hover:text-primary transition-colors" href="#">Keyboard</a></li>
+                    <li><a class="text-medium-emphasis dark:text-outline-variant hover:text-primary transition-colors" href="#">Monitor</a></li>
+                    <li><a class="text-medium-emphasis dark:text-outline-variant hover:text-primary transition-colors" href="#">Audio</a></li>
+                </ul>
+            </div>
+            <div class="mb-6 md:mb-0">
+                <h4 class="font-label-md text-label-md text-primary dark:text-on-primary uppercase mb-base">Perusahaan</h4>
+                <ul class="space-y-sm mt-4">
+                    <li><a class="text-medium-emphasis dark:text-outline-variant hover:text-primary transition-colors" href="#">Tentang Kami</a></li>
+                    <li><a class="text-medium-emphasis dark:text-outline-variant hover:text-primary transition-colors" href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md text-primary dark:text-on-primary uppercase mb-base">Legalitas</h4>
+                <ul class="space-y-sm mt-4">
+                    <li><a class="text-medium-emphasis dark:text-outline-variant hover:text-primary transition-colors" href="#">Kebijakan Privasi</a></li>
+                    <li><a class="text-medium-emphasis dark:text-outline-variant hover:text-primary transition-colors" href="#">Syarat & Ketentuan</a></li>
+                </ul>
+                <div class="mt-10 md:mt-huge font-body-md text-[12px] text-outline-variant uppercase tracking-widest">
+                    © 2024 ged z PLATFORM. HAK CIPTA DILINDUNGI.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImg = document.querySelector('section img');
+            
+            if(heroImg && window.innerWidth > 768) {
+                heroImg.style.transform = `translateY(${scrolled * 0.4}px)`;
+            } else if (heroImg) {
+                heroImg.style.transform = 'none';
+            }
+            
+            const navbar = document.querySelector('nav');
+            if (scrolled > 50) {
+                navbar.classList.add('h-16', 'shadow-sm');
+                navbar.classList.remove('h-20');
+            } else {
+                navbar.classList.add('h-20');
+                navbar.classList.remove('h-16', 'shadow-sm');
+            }
+        });
+
+        document.querySelectorAll('.demo-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const action = btn.getAttribute('data-action');
+                alert(`[AKSI PROTOTIPE] Tombol diklik: ${action}`);
+            });
+        });
+
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>
