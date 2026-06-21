@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ged z</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f9f9f9",
+                        "secondary-container": "#e4e2e2",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-primary-fixed": "#1c1b1b",
+                        "pure-black": "#000000",
+                        "inverse-primary": "#c8c6c5",
+                        "on-secondary-container": "#646464",
+                        "image-bg": "#F5F5F5",
+                        "surface-dim": "#dadada",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "outline": "#747878",
+                        "on-tertiary-fixed-variant": "#484645",
+                        "primary-fixed": "#e5e2e1",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2f3131",
+                        "surface": "#FFFFFF",
+                        "surface-tint": "#5f5e5e",
+                        "on-primary-fixed-variant": "#474646",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#1d1b1a",
+                        "surface-container": "#eeeeee",
+                        "outline-variant": "#c4c7c7",
+                        "on-tertiary-container": "#868381",
+                        "surface-container-low": "#f3f3f3",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "on-surface-variant": "#444748",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "secondary-fixed": "#e4e2e2",
+                        "tertiary-fixed-dim": "#cac6c3",
+                        "secondary": "#5e5e5e",
+                        "on-surface": "#1a1c1c",
+                        "tertiary-fixed": "#e6e1df",
+                        "medium-emphasis": "#737373",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "border-light": "#E5E5E5",
+                        "tertiary-container": "#1d1b1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary": "#000000",
+                        "tertiary": "#000000",
+                        "primary-container": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#474747",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#858383",
+                        "surface-container-high": "#e8e8e8",
+                        "on-background": "#1a1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "32px",
+                        "xxl": "48px",
+                        "sm": "8px",
+                        "md": "16px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "huge": "64px",
+                        "xs": "4px",
+                        "margin-mobile": "16px",
+                        "lg": "24px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-hero-mobile": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-hero": ["Plus Jakarta Sans"],
+                        "price-tag": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-hero-mobile": ["48px", {"lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-hero": ["96px", {"lineHeight": "100%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "price-tag": ["18px", {"lineHeight": "24px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { background-color: #f9f9f9; color: #1a1c1c; -webkit-font-smoothing: antialiased; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="font-body-lg text-body-lg">
+    <nav class="bg-surface sticky top-0 z-50 border-b border-border-light flex justify-between items-center px-margin-mobile md:px-margin-desktop py-md w-full transition-all duration-300 relative">
+        <div class="font-headline-lg text-headline-lg font-bold text-primary tracking-tighter cursor-pointer">ged z</div>
+        
+        <div class="hidden md:flex items-center gap-xl font-body-lg text-body-lg">
+            <a class="text-secondary hover:text-primary transition-colors duration-200" href="index.html">Beranda</a>
+            <a class="text-primary font-bold border-b-2 border-primary pb-1" href="belanja.html">Belanja</a>
+            <a class="text-secondary hover:text-primary transition-colors duration-200" href="koleksi.html">Koleksi</a>
+        </div>
+        
+        <div class="flex items-center gap-md md:gap-lg">
+            <button class="material-symbols-outlined text-primary hover:scale-95 active:scale-90 transition-transform">search</button>
+            <button class="material-symbols-outlined text-primary hover:scale-95 active:scale-90 transition-transform">shopping_cart</button>
+            <button class="hidden sm:block material-symbols-outlined text-primary hover:scale-95 active:scale-90 transition-transform">person</button>
+            <button id="mobile-menu-btn" class="md:hidden material-symbols-outlined text-primary active:scale-90 transition-transform">menu</button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-surface border-b border-border-light flex-col px-margin-mobile py-4 space-y-4 shadow-lg md:hidden z-50">
+            <a class="text-secondary hover:text-primary block" href="index.html">Beranda</a>
+            <a class="text-primary font-bold block" href="belanja.html">Belanja</a>
+            <a class="text-secondary hover:text-primary block" href="koleksi.html">Koleksi</a>
+            <a class="text-secondary hover:text-primary block sm:hidden" href="#">Profil</a>
+        </div>
+    </nav>
+
+    <header class="relative w-full h-[50vh] md:h-[60vh] flex flex-col justify-center items-center overflow-visible mb-xl md:mb-xxl">
+        <div class="absolute inset-0 z-0">
+            <img alt="Latar Belakang Belanja" class="w-full h-full object-cover grayscale brightness-75" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1920&q=80">
+        </div>
+        <div class="relative z-10 flex flex-col items-center text-center px-margin-mobile">
+            <h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-white opacity-90 tracking-tighter uppercase mb-md">BELANJA</h1>
+        </div>
+        <div class="absolute -bottom-8 md:bottom-10 z-20 w-full max-w-3xl px-margin-mobile">
+            <div class="bg-surface rounded-full border border-border-light p-2 flex items-center gap-2 shadow-md h-14 md:h-16">
+                <span class="material-symbols-outlined ml-2 md:ml-md text-medium-emphasis">search</span>
+                <input class="flex-grow border-none focus:ring-0 font-body-md text-body-md bg-transparent outline-none w-1/2" placeholder="Cari desain minimalis..." type="text">
+                <button class="bg-primary text-on-primary px-4 md:px-xl h-full rounded-full font-label-md text-label-md hover:bg-secondary transition-all uppercase">Cari</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-10 md:py-xxl grid grid-cols-1 md:grid-cols-12 gap-gutter">
+        
+        <aside class="col-span-1 md:col-span-3 flex flex-col gap-lg border-b border-border-light md:border-none pb-lg md:pb-0">
+            <div class="flex flex-col gap-sm">
+                <h2 class="font-headline-md text-headline-md font-bold mb-md">Kategori</h2>
+                <div class="flex flex-row md:flex-col gap-md overflow-x-auto no-scrollbar md:overflow-x-visible pb-2 md:pb-0 whitespace-nowrap md:whitespace-normal">
+                    <a class="text-primary font-bold flex items-center justify-between gap-xl md:gap-0 bg-secondary-container/30 md:bg-transparent px-4 md:px-0 py-2 md:py-0 rounded-full md:rounded-none" href="#">
+                        <div class="flex items-center gap-sm">
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">new_releases</span>
+                            <span class="font-label-md text-label-md">Terbaru</span>
+                        </div>
+                        <span class="bg-primary text-white text-[10px] px-2 py-0.5 rounded-full ml-2 md:ml-0">12</span>
+                    </a>
+                    <a class="text-medium-emphasis hover:text-primary flex items-center justify-between gap-xl md:gap-0 bg-surface-variant/20 md:bg-transparent px-4 md:px-0 py-2 md:py-0 rounded-full md:rounded-none" href="#">
+                        <div class="flex items-center gap-sm">
+                            <span class="material-symbols-outlined">checkroom</span>
+                            <span class="font-label-md text-label-md">Streetwear</span>
+                        </div>
+                        <span class="bg-surface-variant text-secondary text-[10px] px-2 py-0.5 rounded-full ml-2 md:ml-0">24</span>
+                    </a>
+                    <a class="text-medium-emphasis hover:text-primary flex items-center justify-between gap-xl md:gap-0 bg-surface-variant/20 md:bg-transparent px-4 md:px-0 py-2 md:py-0 rounded-full md:rounded-none" href="#">
+                        <div class="flex items-center gap-sm">
+                            <span class="material-symbols-outlined">watch</span>
+                            <span class="font-label-md text-label-md">Aksesoris</span>
+                        </div>
+                        <span class="bg-surface-variant text-secondary text-[10px] px-2 py-0.5 rounded-full ml-2 md:ml-0">48</span>
+                    </a>
+                    <a class="text-medium-emphasis hover:text-primary flex items-center justify-between gap-xl md:gap-0 bg-surface-variant/20 md:bg-transparent px-4 md:px-0 py-2 md:py-0 rounded-full md:rounded-none" href="#">
+                        <div class="flex items-center gap-sm">
+                            <span class="material-symbols-outlined">straighten</span>
+                            <span class="font-label-md text-label-md">Alas Kaki</span>
+                        </div>
+                        <span class="bg-surface-variant text-secondary text-[10px] px-2 py-0.5 rounded-full ml-2 md:ml-0">18</span>
+                    </a>
+                    <a class="text-medium-emphasis hover:text-primary flex items-center justify-between gap-xl md:gap-0 bg-error-container/30 md:bg-transparent px-4 md:px-0 py-2 md:py-0 rounded-full md:rounded-none" href="#">
+                        <div class="flex items-center gap-sm text-error">
+                            <span class="material-symbols-outlined">local_offer</span>
+                            <span class="font-label-md text-label-md">Diskon</span>
+                        </div>
+                        <span class="bg-error-container text-on-error-container text-[10px] px-2 py-0.5 rounded-full ml-2 md:ml-0">HOT</span>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-4 md:mt-lg pt-md md:pt-lg border-t border-border-light md:block">
+                <h3 class="font-label-md text-label-md font-bold mb-md uppercase tracking-widest text-medium-emphasis">Rentang Harga</h3>
+                <div class="relative h-1 bg-surface-variant rounded-full mt-6">
+                    <div class="absolute left-0 right-1/4 h-full bg-primary rounded-full"></div>
+                    <div class="absolute left-0 -top-2 w-5 h-5 bg-primary border-4 border-surface rounded-full shadow-md cursor-pointer"></div>
+                    <div class="absolute right-1/4 -top-2 w-5 h-5 bg-primary border-4 border-surface rounded-full shadow-md cursor-pointer"></div>
+                </div>
+                <div class="flex justify-between mt-md font-label-md text-label-md">
+                    <span>$0</span>
+                    <span>$850</span>
+                </div>
+            </div>
+        </aside>
+
+        <section class="col-span-1 md:col-span-9 mt-4 md:mt-0">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-xl gap-md">
+                <p class="font-label-md text-label-md text-medium-emphasis">Menampilkan 1-12 dari 124 hasil</p>
+                <div class="flex gap-md w-full sm:w-auto">
+                    <button class="flex items-center justify-between sm:justify-start gap-xs font-label-md text-label-md border border-border-light px-md py-sm rounded-full bg-surface w-full sm:w-auto">
+                        <span>Urutkan: Default</span> <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                <div class="bg-surface rounded-lg p-md border border-border-light hover:border-primary transition-all duration-300 group shadow-sm hover:shadow-md">
+                    <div class="relative aspect-square bg-image-bg rounded-md overflow-hidden mb-md">
+                        <img class="w-full h-full object-cover grayscale mix-blend-multiply transition-transform duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=500&q=80" alt="Kursi Monokrom">
+                        <span class="absolute top-sm right-sm bg-surface text-primary px-md py-xs rounded-full font-label-md text-[10px] font-bold shadow-sm">BARU</span>
+                    </div>
+                    <div class="flex justify-between items-start mb-xs">
+                        <h3 class="font-headline-md text-headline-md font-bold truncate pr-2">MONO Lounge</h3>
+                        <p class="font-price-tag text-price-tag whitespace-nowrap">$420</p>
+                    </div>
+                    <div class="flex items-center gap-xs mb-md">
+                        <span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="font-label-md text-label-md">4.8</span>
+                    </div>
+                    <div class="flex gap-sm">
+                        <button class="flex-1 py-sm border border-border-light rounded-full font-label-md text-label-md hover:bg-surface-variant transition-all active:scale-95">Tambah</button>
+                        <button class="flex-1 py-sm bg-primary text-white rounded-full font-label-md text-label-md hover:bg-secondary transition-all active:scale-95">Beli</button>
+                    </div>
+                </div>
+                <div class="bg-surface rounded-lg p-md border border-border-light hover:border-primary transition-all duration-300 group shadow-sm hover:shadow-md">
+                    <div class="relative aspect-square bg-image-bg rounded-md overflow-hidden mb-md">
+                        <img class="w-full h-full object-cover grayscale mix-blend-multiply transition-transform duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1518444065439-e914c061e141?auto=format&fit=crop&w=500&q=80" alt="Meja Linear">
+                        <span class="absolute top-sm right-sm bg-primary text-white px-md py-xs rounded-full font-label-md text-[10px] font-bold shadow-sm">-20%</span>
+                    </div>
+                    <div class="flex justify-between items-start mb-xs">
+                        <h3 class="font-headline-md text-headline-md font-bold truncate pr-2">Meja Linear</h3>
+                        <p class="font-price-tag text-price-tag whitespace-nowrap">$280</p>
+                    </div>
+                    <div class="flex items-center gap-xs mb-md">
+                        <span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="font-label-md text-label-md">4.9</span>
+                    </div>
+                    <div class="flex gap-sm">
+                        <button class="flex-1 py-sm border border-border-light rounded-full font-label-md text-label-md hover:bg-surface-variant transition-all active:scale-95">Tambah</button>
+                        <button class="flex-1 py-sm bg-primary text-white rounded-full font-label-md text-label-md hover:bg-secondary transition-all active:scale-95">Beli</button>
+                    </div>
+                </div>
+                <div class="bg-surface rounded-lg p-md border border-border-light hover:border-primary transition-all duration-300 group shadow-sm hover:shadow-md">
+                    <div class="relative aspect-square bg-image-bg rounded-md overflow-hidden mb-md">
+                        <img class="w-full h-full object-cover grayscale mix-blend-multiply transition-transform duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80" alt="Jam Tangan Vantablack">
+                    </div>
+                    <div class="flex justify-between items-start mb-xs">
+                        <h3 class="font-headline-md text-headline-md font-bold truncate pr-2">Dial Vantablack</h3>
+                        <p class="font-price-tag text-price-tag whitespace-nowrap">$1,200</p>
+                    </div>
+                    <div class="flex items-center gap-xs mb-md">
+                        <span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="font-label-md text-label-md">5.0</span>
+                    </div>
+                    <div class="flex gap-sm">
+                        <button class="flex-1 py-sm border border-border-light rounded-full font-label-md text-label-md hover:bg-surface-variant transition-all active:scale-95">Tambah</button>
+                        <button class="flex-1 py-sm bg-primary text-white rounded-full font-label-md text-label-md hover:bg-secondary transition-all active:scale-95">Beli</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="bg-background py-10 md:py-xxl border-t border-border-light">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+            <h2 class="font-headline-lg text-headline-lg font-bold mb-xl text-primary">Jelajahi rekomendasi kami</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-md md:gap-gutter">
+                <div class="bg-surface rounded-lg p-md border border-border-light group cursor-pointer hover:border-primary transition-all shadow-sm">
+                    <div class="aspect-square bg-image-bg rounded-md overflow-hidden mb-sm grayscale">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" alt="Headphone">
+                    </div>
+                    <h4 class="font-label-md text-label-md font-bold truncate text-primary">Sonic Purity</h4>
+                    <p class="text-medium-emphasis text-[12px]">$249</p>
+                </div>
+                <div class="bg-surface rounded-lg p-md border border-border-light group cursor-pointer hover:border-primary transition-all shadow-sm">
+                    <div class="aspect-square bg-image-bg rounded-md overflow-hidden mb-sm grayscale">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=500&q=80" alt="Sneaker">
+                    </div>
+                    <h4 class="font-label-md text-label-md font-bold truncate text-primary">Aero Step</h4>
+                    <p class="text-medium-emphasis text-[12px]">$185</p>
+                </div>
+                <div class="bg-surface rounded-lg p-md border border-border-light group cursor-pointer hover:border-primary transition-all shadow-sm">
+                    <div class="aspect-square bg-image-bg rounded-md overflow-hidden mb-sm grayscale">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=500&q=80" alt="Kamera">
+                    </div>
+                    <h4 class="font-label-md text-label-md font-bold truncate text-primary">Kaca Inti 35</h4>
+                    <p class="text-medium-emphasis text-[12px]">$890</p>
+                </div>
+                <div class="bg-surface rounded-lg p-md border border-border-light group cursor-pointer hover:border-primary transition-all shadow-sm">
+                    <div class="aspect-square bg-image-bg rounded-md overflow-hidden mb-sm grayscale">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=500&q=80" alt="Kacamata">
+                    </div>
+                    <h4 class="font-label-md text-label-md font-bold truncate text-primary">Bingkai Hantu</h4>
+                    <p class="text-medium-emphasis text-[12px]">$310</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop mb-10 md:mb-xxl mt-lg">
+        <div class="bg-primary rounded-lg p-6 md:p-xxl flex flex-col md:flex-row items-center justify-between gap-xl md:gap-xxl text-white overflow-hidden relative shadow-lg">
+            <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+            <div class="relative z-10 flex flex-col gap-md w-full md:max-w-xl text-center md:text-left">
+                <h2 class="font-headline-lg text-headline-lg font-bold leading-tight">Siap Dapatkan Barang Baru Kami?</h2>
+                <div class="flex flex-col sm:flex-row gap-sm w-full mt-md">
+                    <input class="flex-grow bg-white/10 border border-white/20 rounded-full px-lg py-md text-white placeholder:text-white/50 focus:ring-1 focus:ring-white focus:bg-white/20 transition-all outline-none text-center sm:text-left" placeholder="Masukkan emailmu" type="email">
+                    <button class="bg-white text-primary px-xl py-md rounded-full font-label-md text-label-md hover:bg-surface-variant transition-all whitespace-nowrap font-bold w-full sm:w-auto">Langganan</button>
+                </div>
+            </div>
+            <div class="relative z-10 max-w-xs text-right hidden md:block">
+                <p class="text-medium-emphasis text-body-md italic leading-relaxed text-white/80">"Kesederhanaan adalah puncak kecanggihan. Rasakan masa depan dengan pilihan esensial monokrom kami."</p>
+                <p class="mt-md font-bold text-white/40 uppercase tracking-tighter text-[10px]">ged z EDITORIAL 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-surface border-t pt-10 md:pt-huge pb-xl md:pb-xxl px-margin-mobile md:px-margin-desktop w-full">
+        <div class="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-xl md:gap-huge">
+            <div class="flex flex-col gap-md">
+                <div class="font-headline-md text-headline-md font-bold text-primary">ged z</div>
+                <p class="text-medium-emphasis text-body-md">Menyajikan desain monokrom terbaik. Bagi mereka yang percaya bahwa lebih sedikit adalah segalanya.</p>
+                <div class="flex gap-md mt-md">
+                    <div class="w-10 h-10 border border-border-light rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all cursor-pointer text-primary">
+                        <span class="material-symbols-outlined text-[20px]">public</span>
+                    </div>
+                    <div class="w-10 h-10 border border-border-light rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all cursor-pointer text-primary">
+                        <span class="material-symbols-outlined text-[20px]">alternate_email</span>
+                    </div>
+                    <div class="w-10 h-10 border border-border-light rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all cursor-pointer text-primary">
+                        <span class="material-symbols-outlined text-[20px]">chat</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-md">
+                <h4 class="font-label-md text-label-md font-bold uppercase tracking-widest text-primary">Belanja</h4>
+                <div class="flex flex-col gap-sm text-medium-emphasis text-body-md">
+                    <a class="hover:text-primary transition-colors" href="#">Terbaru</a>
+                    <a class="hover:text-primary transition-colors" href="#">Terlaris</a>
+                    <a class="hover:text-primary transition-colors" href="#">Edisi Terbatas</a>
+                    <a class="hover:text-primary transition-colors" href="#">Arsip</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-md">
+                <h4 class="font-label-md text-label-md font-bold uppercase tracking-widest text-primary">Dukungan</h4>
+                <div class="flex flex-col gap-sm text-medium-emphasis text-body-md">
+                    <a class="hover:text-primary transition-colors" href="#">Pengiriman</a>
+                    <a class="hover:text-primary transition-colors" href="#">Pengembalian</a>
+                    <a class="hover:text-primary transition-colors" href="#">Panduan Ukuran</a>
+                    <a class="hover:text-primary transition-colors" href="#">Kontak</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-md">
+                <h4 class="font-label-md text-label-md font-bold uppercase tracking-widest text-primary">Legalitas</h4>
+                <div class="flex flex-col gap-sm text-medium-emphasis text-body-md">
+                    <a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+                    <a class="hover:text-primary transition-colors" href="#">Syarat & Ketentuan</a>
+                    <a class="hover:text-primary transition-colors" href="#">Keberlanjutan</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1440px] mx-auto mt-10 md:mt-huge pt-lg border-t border-border-light flex flex-col sm:flex-row justify-between items-center text-medium-emphasis text-[12px] gap-sm text-center sm:text-left">
+            <p>© 2024 ged z. HAK CIPTA DILINDUNGI.</p>
+            <div class="flex gap-lg font-bold">
+                <span>Didesain dengan Presisi</span>
+                <span>Pengiriman Global</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>
